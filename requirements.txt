@@ -1,0 +1,7 @@
+django
+djangorestframework
+django-cors-hesders
+pillow
+dj-database-url
+gunicorn
+psycopg2
