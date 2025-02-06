@@ -10,6 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 from pathlib import Path;
+import dj_database_url
+
+# Set up DATABASE_URL environment variable, Render automatically provides this
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+# Use dj-database-url to parse the database URL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,6 +92,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+DATABASES = {
+    'default': dj_database_url.config(default=DATABASE_URL)
 }
 
 
