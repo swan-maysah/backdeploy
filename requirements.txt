@@ -1,6 +1,6 @@
 django
 djangorestframework
-django-cors-hesders
+django-cors-headers
 pillow
 dj-database-url
 gunicorn
