@@ -5,4 +5,4 @@ pillow
 dj-database-url
 gunicorn
 psycopg2
-pip install whitenoise
+
